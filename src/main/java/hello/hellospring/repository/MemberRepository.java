@@ -10,4 +10,6 @@ public interface MemberRepository {
     Optional<Member> findById(Long id); //Optional (null값 처리)- Java8
     Optional<Member> findByName(String name);
     List<Member> findAll();
+
+    void clearStore();
 }

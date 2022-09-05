@@ -2,14 +2,22 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class MemberSerivce {
+    //command + shift + t -> test 파일 생성
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    //New 다른 객체 다른 인스턴스이기때문에 내요물이 달라질 수 있음 아래 방법으로 사용
+    //private final MemberRepository memberRepository = new MemoryMemberRepository();
+
+    private final MemberRepository memberRepository;
+
+    public MemberSerivce(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원가입
