@@ -28,11 +28,6 @@ public class MemberServiceTest {
         service = new MemberService(memberRepository);
     }
 
-    @AfterEach
-    public void afterEach(){
-        memberRepository.clearStore();
-    }
-
     @Test
     public void join(){ //회원가입() - 테스트코드는 한글로 함수명으로 작성해도 괜찮음
         //service - join : 동일한 이름이 없으면 return member.getId();
