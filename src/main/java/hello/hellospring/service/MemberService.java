@@ -6,7 +6,7 @@ import hello.hellospring.repository.MemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-public class MemberSerivce {
+public class MemberService {
     //command + shift + t -> test 파일 생성
 
 
@@ -14,7 +14,7 @@ public class MemberSerivce {
     //private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     private final MemberRepository memberRepository;
-    public MemberSerivce(MemberRepository memberRepository) {
+    public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
